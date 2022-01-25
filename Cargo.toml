@@ -13,7 +13,7 @@ license = "MIT/Apache-2.0"
 name = "tiberius"
 readme = "README.md"
 repository = "https://github.com/prisma/tiberius"
-version = "0.6.5"
+version = "0.7.1"
 
 [workspace]
 members = ["runtimes-macro"]
@@ -38,7 +38,6 @@ name = "named-instance-smol"
 required-features = ["sql-browser-smol"]
 
 [dependencies]
-async-stream = "0.2"
 enumflags2 = "0.7"
 byteorder = "1.0"
 encoding = "0.2"
@@ -64,7 +63,7 @@ libgssapi = { version = "0.4.5", optional = true, default-features = false }
 opentls = { version = "0.2.1", features = ["io-async-std"]}
 
 [target.'cfg(not(any(target_os = "macos", target_os = "ios")))'.dependencies]
-async-native-tls = { version = "0.3", features = ["runtime-async-std"]}
+async-native-tls = { version = "0.4", features = ["runtime-async-std"] }
 
 [dependencies.tokio]
 version = "1.0"
